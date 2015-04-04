@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.11: http://docutils.sourceforge.net/" />
+<title>LET's PLAY CHESS</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7614 2013-02-21 15:55:51Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="let-s-play-chess">
+<h1 class="title">LET's PLAY CHESS</h1>
+
+<!-- image::board_pieces.JPG
+:height: 100
+:width: 100
+:scale: 200 -->
+<p>Origin of this game is not certain; some say it originated from India, while
+others claim that it is from China.  What we have today it is evolved form from
+its original. Also, more than winning <strong>‘Winning with Style’</strong> was the concern.
+Tournaments of game started since second half of 19th century. This is a very
+basic introduction of this game.</p>
+<div class="section" id="objective">
+<h1>OBJECTIVE</h1>
+<p>The objective of the game is to trap the opponent's king so that its escape is
+not possible (checkmate). If a player's king is threatened with capture, it is
+said to be in check, and the player must remove the threat of capture on the
+next move. If this cannot be done, the king is said to be in checkmate.
+(Wikipedia)</p>
+<div class="section" id="board-pieces">
+<h2>BOARD &amp; PIECES:</h2>
+<div class="section" id="board">
+<h3>BOARD</h3>
+<blockquote>
+<p>Board is divided into rows and columns and each has 8 boxes.</p>
+<p>Altogether board has 64 square boxes. Each box is called as house.</p>
+</blockquote>
+<p>From Left to right:</p>
+<div class="section" id="vertical-lines">
+<h4>Vertical Lines</h4>
+<blockquote>
+Called as files, normally labeled a through h.</blockquote>
+</div>
+<div class="section" id="horizontal-rows">
+<h4>Horizontal Rows</h4>
+<blockquote>
+Called as ranks, numbered 1 to 8.</blockquote>
+</div>
+</div>
+<div class="section" id="pieces">
+<h3>PIECES:</h3>
+<p>Altogether this game contains six types of pieces and all move differently.</p>
+<p><strong>Pawn (P):</strong>   Moves forward but capture diagonally. Can move one box at a
+time except first move where two boxes are allowed.   Not allowed to move
+if another piece just in front of it. Likewise, backward move is not allowed
+either.</p>
+<p><strong>Knight (N)</strong>   Looks like horse, can move two and half house to left, right,
+forward  and backward,  2 horizontally and one vertically, or two vertically
+and one horizontally. Think of a 990 degree angle for its movement or L shape.
+Behaves like a horse and can jump over other pieces.</p>
+<p><strong>Bishop (B)</strong>  Can make a move only in diagonal direction and a move as far
+it wants.</p>
+<p><strong>Rook (R)</strong>   Can move to any square left right, back and front but straight.
+Can  move as far it wants.</p>
+<p><strong>Queen (Q)</strong>   Most powerful piece on board. It can an move one straight
+direction (horizontally, vertically, sides or diagonally).</p>
+<p><strong>King (K)</strong>  Most important piece, but the weakest at the same time. A king
+can move one square in any direction (horizontally, vertically, sides or
+diagonally) unless the square is already occupied by a friendly piece or the
+move would place the king in check.</p>
+<div class="important">
+<p class="first admonition-title">Important</p>
+<p>The player with the WHITE pieces always moves first.</p>
+<p class="last">It is better to move to think 6 to 7 moves ahead about
+what a piece can do. This is same as forecasting the
+future events and planning accordingly.</p>
+</div>
+</div>
+</div>
+<div class="section" id="board-setting">
+<h2>BOARD SETTING:</h2>
+<p>Pieces are arranged the same way all the time. Second row is filled with pawns.
+The rooks sit in the corners in first row, then the knights next to them, next
+to them are the bishops, and finally the queen goes on her own matching color
+(white queen on white, black queen on black), and the king on the remaining
+square. The player with the WHITE pieces always moves first.</p>
+<p>It is better to move to think 6 to 7 moves ahead about what a piece can do.
+This is same as forecasting the future events and planning accordingly.</p>
+</div>
+<div class="section" id="illegal-moves-irregularities">
+<h2>ILLEGAL MOVES &amp; IRREGULARITIES:</h2>
+<p>Game might have illegal moves or irregularities.</p>
+<div class="section" id="illegal-moves">
+<h3>Illegal Moves:</h3>
+<p>Illegal move is  not permitted by the rules of chess. If discovered during the
+course of a game must be corrected, following the rules depending on scenario.</p>
+</div>
+<div class="section" id="irregularities">
+<h3>Irregularities:</h3>
+<p>Game might also have irregularities and need to be corrected for example, if
+discovered during the game that the starting position was incorrect, the game
+is restarted. Method to correct the irregularity depends on the scenario and
+different scenarios have predefined rules.</p>
+</div>
+</div>
+<div class="section" id="technical">
+<h2>TECHNICAL:</h2>
+<p>And there are some technical words linked to different scenarios of the
+game such as:</p>
+<p><strong>- Lone King:</strong>  When king is the only left piece.</p>
+<p><strong>-Check:</strong> Condition when a player's king is under threat of capture on their
+opponent's next turn.</p>
+<p><strong>-Checkmate:</strong>  Position in which a player's king is in check</p>
+<p><strong>-Touch-Move:</strong> If a player touches any of its own pieces must move that, tied
+to condition of being a legal move. If a player touches an opponent’s piece,
+must capture that piece. In case if touched because wanted to adjust a piece
+must convey their idea usually just by saying <em>“adjust”</em>.</p>
+<p>In addition to the basic moves there are certain moves and techniques linked to
+the pieces, such as:</p>
+<p><strong>-Castling:</strong> Combining with rook, king may make this special move. Allowed when
+neither rook or kings moved prior, and so on.</p>
+</div>
+<div class="section" id="tournaments">
+<h2>TOURNAMENTS:</h2>
+<p>Fédération Internationale des Échecs(FIDE)  or World Chess Federation is an
+international organization responsible to connect national chess federations
+around the world. FIDE not only organizes the tournaments but these tournaments
+follow the FIDE rule handbook.</p>
+<p>Most competitive individual tournaments include Linares chess tournaments and
+the Tata Steel chess tournament. The largest team chess tournament is the Chess
+Olympiad and payers compete for national team. Chess Computer have even entered
+in tournament scenarios. Tournaments have their way of scoring based on
+loose/win and draw. Likewise these games are timed and different types of time
+controls are available. Likewise, different rules available for timing related
+issues and moves.</p>
+</div>
+<div class="section" id="benefits">
+<h2>BENEFITS:</h2>
+<p>Even though we are always doing something online but still the old ways are
+still needed to keep your brain active and powerful.  It can be reading, having
+an outdoor activity, math games or something else. It seems like playing chess
+is sitting idle but with itself this has its own benefits. Playing CHESS is one
+of them. Chess requires a lot of brain activity and being focus it can help
+Alzheimer patients to improve their brains. It helps to improve imagination and
+creativity as well as memory capability. As it helps to develop focus so does
+improve reading ability.</p>
+</div>
+<div class="section" id="ready-to-play">
+<h2>READY TO PLAY:</h2>
+<p>In addition to above described rules and terms there are other additional rules
+applicable to this game and available through online resources/libraries/books
+available in market. Now a day’s easy to play as can be played for, a lot of
+free material available online and so many free softwares are available. Even
+if you do not have a partner can be played with machines.</p>
+<p>Here is the rule book:
+.. <a class="reference external" href="https://www.fide.com/component/handbook/?id=124&amp;view=article">https://www.fide.com/component/handbook/?id=124&amp;view=article</a></p>
+<p><strong>References</strong></p>
+<p><a class="reference external" href="http://www.wholesalechess.com/news/1111/5-brain-boosts-from-playing-chess.html">http://www.wholesalechess.com/news/1111/5-brain-boosts-from-playing-chess.html</a></p>
+<p><a class="reference external" href="http://en.wikipedia.org/wiki/Rules_of_chess">http://en.wikipedia.org/wiki/Rules_of_chess</a></p>
+<p><a class="reference external" href="http://chess.math.com/">http://chess.math.com/</a></p>
+<p><a class="reference external" href="http://www.il-chess.org/index.php/guide-to-scholastic-tournaments">http://www.il-chess.org/index.php/guide-to-scholastic-tournaments</a></p>
+<p><a class="reference external" href="http://www.chessteachers.org/Rules%20of%20Chess.htm">http://www.chessteachers.org/Rules%20of%20Chess.htm</a></p>
+<p><a class="reference external" href="http://en.wikipedia.org/wiki/Rules_of_chess#Timing">http://en.wikipedia.org/wiki/Rules_of_chess#Timing</a>.</p>
+<p><a class="reference external" href="http://www.chess.com/learn-how-to-play-chess">http://www.chess.com/learn-how-to-play-chess</a></p>
+<p><a class="reference external" href="http://en.wikipedia.org/wiki/FIDE">http://en.wikipedia.org/wiki/FIDE</a></p>
+<p><a class="reference external" href="http://www-math.bgsu.edu/~zirbel/chess/BasicChessRules.pdf">http://www-math.bgsu.edu/~zirbel/chess/BasicChessRules.pdf</a></p>
+</div>
+</div>
+</div>
+</body>
+</html>
