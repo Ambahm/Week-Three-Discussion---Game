@@ -5,4 +5,4 @@ Purpose is to introduce a game using reStructuredText as a simple text-based mea
 
 I chose, CHESS,  a board game for this task.
 
-This does not tell each and evry detail of the game.
+This does not tell each and every detail of the game.
